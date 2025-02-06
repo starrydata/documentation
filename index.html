@@ -1,0 +1,17 @@
+---
+layout: default
+title: Home
+---
+
+<section class="latest-posts">
+  <h2>Latest Changes</h2>
+  <ul>
+    {% for post in site.changes | sort: 'date' | reverse | limit: 5 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="/changes/" class="see-all">See All Changes</a>
+</section>
