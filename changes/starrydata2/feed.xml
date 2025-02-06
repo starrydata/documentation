@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /changes/starrydata2/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title }} - starrydata2 (Changes)</title>
+    <link>{{ site.url }}/changes/starrydata2/</link>
+    <description>{{ site.description }}</description>
+    {% comment %}
+      changes コレクション内の投稿のうち、categories に "starrydata2" が含まれるもののみ抽出
+    {% endcomment %}
+    {% assign filtered_changes = site.changes | where_exp:"item", "item.categories contains 'Starrydata2'" %}
+    {% for item in filtered_changes %}
+    <item>
+      <title>{{ item.title }}</title>
+      <link>{{ site.url }}{{ item.url }}</link>
+      <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
+      <description>{{ item.excerpt | xml_escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
