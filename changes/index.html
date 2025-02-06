@@ -4,9 +4,10 @@ title: "All Changes"
 permalink: /changes/
 ---
 
+{% assign sorted_changes = site.changes | sort: 'date' | reverse %}
 <h1>All Changes</h1>
 <ul>
-  {% for post in site.changes | sort: 'date' | reverse %}
+  {% for post in sorted_changes %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
       <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
