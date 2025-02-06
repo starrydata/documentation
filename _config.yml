@@ -34,6 +34,7 @@ github_username:  #starrydata
 theme: minima
 plugins:
   - jekyll-feed
+future: false
 
 collections:
   # releases:
