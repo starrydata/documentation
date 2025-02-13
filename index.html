@@ -3,16 +3,86 @@ layout: default
 title: Home
 ---
 
-{% assign sorted_changes = site.changes | sort: "date" | reverse %}
-<section class="latest-posts">
-  <h2>Latest Changes</h2>
-  <ul>
-    {% for post in sorted_changes limit:5 %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-  <a href="/changes/" class="see-all">See All Changes</a>
-</section>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>The Starrydata Project</title>
+</head>
+<body>
+  <h1>The Starrydata Project</h1>
+  <img src="https://explorer.starrydata.org:443/media/1d283709181f33557f18c2132500f7e0bd1dcb8042547e20a0d339f8.jpg" alt="Starrydata Image" style="max-width:100%;">
+  <p>
+    Starrydata is an open database project that aims to collect, analyze, and share valuable experimental data, revolutionizing research efficiency in the field of materials informatics.
+  </p>
+
+  <h3>1. Materials Data from Published Plot Images</h3>
+  <p>
+    We have collected a vast collection of experimental data extracted from previously published papers. We convert graph images in papers into usable numerical data, enabling efficient analysis and reuse.
+  </p>
+
+  <h3>2. Collaborative Data Sharing</h3>
+  <p>
+    Contribute to the global open data movement by sharing data that you extracted from published papers, using our plot digitizer. Download data in various formats, including Excel-friendly tables, grid-based files, and relational databases, tailored for different research needs.
+  </p>
+
+  <h3>3. Non-profit Academic Research</h3>
+  <p>
+    Starrydata2 operates as a non-profit initiative, supporting academic research and eliminating user fees. Our data curators are supported by public research funds and collaborative researches with industries. Help us expand the database by citing Starrydata in your research.
+  </p>
+  <img src="https://explorer.starrydata.org:443/media/1a01d11e242041ecf478e729184df6afd4649744a480c3c7f41bdf70.jpg" alt="Starrydata Image 2" style="max-width:100%;">
+
+  <h2>Concepts of Starrydata</h2>
+  <p>
+    Starrydata is a project that aims to extract experimental data from a vast collection of previously published papers and build an open database. There is a wealth of valuable experimental data still untapped within millions of papers. Starrydata aims to collect and integrate this data to facilitate research efficiency in the field of data science.
+  </p>
+  <p>
+    Much of the experimental data is presented in the form of graph images within the papers, making access to the original numerical data challenging. Starrydata analyzes these graph images, extracts the original numerical data, and consolidates it in one place. This enables the reuse of experimental data. Emphasizing data sharing without infringing upon copyrights, Starrydata prioritizes information sharing through proper citation.
+  </p>
+  <p>
+    During the data registration process in Starrydata, data collectors read the full text of papers and input the meaning (labels) of the data. While complete automation of this process is currently difficult, data collectors diligently perform this task.
+  </p>
+  <p>
+    Starrydata2 operates as a non-profit academic research initiative, and there are no fees charged to users for its utilization. Researchers who use Starrydata2 are requested to cite the project's papers. Increased citation counts contribute to the evaluation of the project's performance. The current data collection efforts are part of a research project and employ data collectors using research funding.
+  </p>
+  <p>
+    The data collected through Starrydata2 is shared globally, regardless of the data contributors. As more users collect and register data from papers, the scale of the database expands. Users can download associated data based on their created lists of papers. The available data files include table-based files in a format that is easy to edit in Excel, grid-based data files, and files structured as relational databases. Additionally, users can programmatically collect data using the provided API. These data output functionalities are designed to enhance usability in data science research.
+  </p>
+  <img src="https://explorer.starrydata.org:443/media/989dd003aff0f300fdc1f3a5cf8c0bb35a3291786cf7953eba4f19d3.jpg" alt="Starrydata Image 3" style="max-width:100%;">
+
+  <h2>How to Access Starrydata's Data</h2>
+  <h3>1. Explore on this Website</h3>
+  <p>
+    On this website, we present various interactive graphs, tools, and datasets curated from the perspective of materials scientists to provide a clear understanding of Starrydata's data. Through these analyses, we aim to offer a comprehensive view of the complex world of materials science, enabling researchers in the field to conduct their studies more efficiently. We will continually update the analysis results on this website.
+  </p>
+
+  <h3>2. View within the Starrydata2 Web System</h3>
+  <p>
+    The Starrydata2 web system contains the latest data collected by our team of data collectors and users worldwide from graphs in research papers. Within this system, there is a simple paper search feature available. Additionally, by visiting the Summary page of each paper, you can view the included data in graphical form. Users also have the ability to make corrections to inaccurately recorded data themselves and contribute new data that has not been included yet.
+  </p>
+
+  <h3>3. Explore with the Data Visualizer in the Starrydata2 Web System</h3>
+  <p>
+    Within the Starrydata2 web system, if you create a custom list of papers that interest you, you can download the associated experimental data in JSON or CSV format. By uploading the downloaded file to the Visualizer using the "Get interpolated data" option, you can plot the data interactively as scatter plots or in other forms using any desired vertical and horizontal axes.
+  </p>
+
+  <h3>4. Download the Entire Dataset for Independent Analysis</h3>
+  <p>
+    By accessing the Dataset section in the Starrydata2 web system, you can download the complete dataset. Although the file is complex and large, you can use various programming languages, such as Python, to extract and organize the desired data, allowing you to perform independent analysis.
+  </p>
+
+  <h3>5. Retrieve Data using the Web API</h3>
+  <p>
+    The Starrydata2 web system provides a simple API. By specifying either <code>paperid</code>, <code>figureid</code>, or <code>sampleid</code>, you can download the associated data in JSON format. It is also possible to search for samples that contain or do not contain specific constituents and obtain a list of sampleids. Combining these functionalities allows you to create your own custom web system.
+  </p>
+  <img src="https://explorer.starrydata.org:443/media/e3bd16d077632ff538c318792713101f8ae4ba6d3630aa3ddf543477.jpg" alt="Starrydata Image 4" style="max-width:100%;">
+
+  <h2>Access Starrydata2 Web System</h2>
+  <p>
+    Experience the power of open experimental data with Starrydata2. Visit our website at
+    <a href="https://www.starrydata2.org" target="_blank">https://www.starrydata2.org</a>
+    and start harnessing the true potential of your data.
+  </p>
+  <img src="https://explorer.starrydata.org:443/media/09e8b6d933d5679846de9f384d5e6df7d2318edeeab0d27690dac383.jpg" alt="Starrydata Image 5" style="max-width:100%;">
+</body>
+</html>
