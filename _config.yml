@@ -40,9 +40,9 @@ collections:
   # releases:
   #   output: true
   #   permalink: /releases/:path/
-  changes:
+  changelog:
     output: true
-    permalink: /changes/:path/
+    permalink: /changelog/:path/
     # Optional settings:
     # docs: true
     # sort_by: date
@@ -51,7 +51,7 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: changes
+      type: changelog
     values:
       layout: single
       author_profile: true

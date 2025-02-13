@@ -1,15 +1,15 @@
 ---
 layout: null
-permalink: /changes/starrydata2/feed.xml
+permalink: /changelog/starrydata2/feed.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>{{ site.title }} - starrydata2 (Changes)</title>
-    <link>{{ site.url }}/changes/starrydata2/</link>
+    <title>{{ site.title }} - starrydata2 (changelog)</title>
+    <link>{{ site.url }}/changelog/starrydata2/</link>
     <description>{{ site.description }}</description>
-    {% assign filtered_changes = site.changes | where_exp:"item", "item.url contains '/changes/starrydata2/'" %}
-    {% for item in filtered_changes %}
+    {% assign filtered_changelog = site.changelog | where_exp:"item", "item.url contains '/changelog/starrydata2/'" %}
+    {% for item in filtered_changelog %}
     <item>
       <version>{{ item.version }}</version>
       <title>{{ item.title }}</title>

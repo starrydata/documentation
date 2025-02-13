@@ -7,7 +7,7 @@ layout: null
     <title>{{ site.title }}</title>
     <link>{{ site.url }}</link>
     <description>{{ site.description }}</description>
-    {% assign all_items = site.changes %}
+    {% assign all_items = site.changelog %}
     {% assign sorted_items = all_items | sort: "date" | reverse %}
     {% for item in sorted_items %}
       <item>

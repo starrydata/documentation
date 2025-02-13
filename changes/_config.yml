@@ -1,4 +1,0 @@
-# _config.yml
-
-paginate: 5
-paginate_path: "/changes/page:num/"

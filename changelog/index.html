@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "All Changes"
-permalink: /changes/
+title: "Changelog"
+permalink: /changelog/
 ---
 
 <style>
@@ -20,7 +20,7 @@ permalink: /changes/
 <section class="release-notes">
   <h2>StarryData2</h2>
   <ul>
-    {% assign starrydata2_notes = site.changes | where_exp:"post", "post.url contains '/changes/starrydata2/'" | sort:"date" | reverse %}
+    {% assign starrydata2_notes = site.changelog | where_exp:"post", "post.url contains '/changelog/starrydata2/'" | sort:"date" | reverse %}
     {% for post in starrydata2_notes limit:5 %}
       <li>
         <p class="meta">{{ post.date | date: "%B %d, %Y" }} - <a href="{{ post.url }}">{{post.version}} {{ post.title }}</a></p>
@@ -34,7 +34,7 @@ permalink: /changes/
 <section class="release-notes">
   <h2>Starrydata Visualizer</h2>
   <ul>
-    {% assign visualizer_notes = site.changes | where_exp:"post", "post.url contains '/changes/visualizer/'" | sort:"date" | reverse %}
+    {% assign visualizer_notes = site.changelog | where_exp:"post", "post.url contains '/changelog/visualizer/'" | sort:"date" | reverse %}
     {% for post in visualizer_notes limit:5 %}
       <li>
         <p class="meta">{{ post.date | date: "%B %d, %Y" }} - <a href="{{ post.url }}">{{post.version}} {{ post.title }}</a></p>
