@@ -11,10 +11,11 @@ permalink: /changes/starrydata2/feed.xml
     {% assign filtered_changes = site.changes | where_exp:"item", "item.url contains '/changes/starrydata2/'" %}
     {% for item in filtered_changes %}
     <item>
+      <version>{{ item.version }}</version>
       <title>{{ item.title }}</title>
       <link>{{ site.url }}{{ item.url }}</link>
       <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
-      <description>{{ item.excerpt | xml_escape }}</description>
+      <description>{{ item.description }}</description>
     </item>
     {% endfor %}
   </channel>
