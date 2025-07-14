@@ -24,6 +24,8 @@ The StarryData dataset is a comprehensive database containing experimental data 
 **Number of records**: 202,673
 **File size**: ~25MB
 
+**Note**: The dataset includes only the latest version of each measurement curve. When multiple versions exist for the same figure_id and sample_id combination due to data corrections or updates, only the most recent version (based on updated_at timestamp) is included in the exported dataset.
+
 #### Schema Definition
 
 | Column Name | Data Type | Description | Completeness |
