@@ -26,7 +26,8 @@ title: Starrydata Documentation
 #   Google search results) and in your feed.xml site description.
 # baseurl: # the subpath of your site, e.g. /blog
 google_analytics: G-4L8V2FK1Q2
-url: "https://docs.starrydata.org" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: # GitHub Pagesでは /documentation/ が自動設定される
+url: "https://starrydata.nims.go.jp/docs" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 github_username:  #starrydata
 
